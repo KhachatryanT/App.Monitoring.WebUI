@@ -1,8 +1,9 @@
 import {DeviceType} from "./deviceType";
 
-export interface Node {
-  name: string;
-  date: Date;
+export interface DeviceStatistic {
+  id: string;
+  userName: string;
+  statisticDate: Date;
   clientVersion: string;
   deviceType: DeviceType;
 }

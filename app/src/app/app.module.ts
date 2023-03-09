@@ -5,33 +5,29 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from "./header/header.component";
 import { MainComponent } from './main/main.component';
-import { NodeEditComponent } from './node-edit/node-edit.component';
-import {NodeService} from "./node.service";
+import {DevicesStatisticsService} from "./devicesStatistics.service";
 import {HttpClientModule} from "@angular/common/http";
-import { NodeDetailsComponent } from './node-details/node-details.component';
-import { NodesComponent } from './nodes/nodes.component';
-import { NodeTableItemComponent } from './node-table-item/node-table-item.component';
-import { NodeCreateComponent } from './node-create/node-create.component';
-import { ComponentBaseComponent } from './component-base/component-base.component';
+import { StatisticsComponent } from '././statistics/statistics.component';
+import {MatTableModule} from "@angular/material/table";
+import {CommonModule} from "@angular/common";
+import {EnumDescriptionPipe} from "../shared/types/enumDescription.pipe";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainComponent,
-    NodeEditComponent,
-    NodeDetailsComponent,
-    NodesComponent,
-    NodeTableItemComponent,
-    NodeCreateComponent,
-    ComponentBaseComponent,
+    StatisticsComponent,
+    EnumDescriptionPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    CommonModule
   ],
-  providers: [NodeService],
+  providers: [DevicesStatisticsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
