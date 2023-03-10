@@ -1,6 +1,6 @@
 export enum DeviceType {
-  Unknown,
-  Android,
-  Iphone,
-  Windows
+    Unknown,
+    Android,
+    Iphone,
+    Windows,
 }
