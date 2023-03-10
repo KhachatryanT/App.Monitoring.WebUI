@@ -9,6 +9,8 @@ import { DestroyService } from '../destroy.service';
     templateUrl: './statistics.component.html',
 })
 export class StatisticsComponent implements OnInit {
+    public dataSource: DeviceStatistic[];
+
     public readonly displayedColumns: string[] = [
         'position',
         'userName',
@@ -17,7 +19,6 @@ export class StatisticsComponent implements OnInit {
         'deviceType',
     ];
 
-    public dataSource: DeviceStatistic[];
     constructor(
         private readonly devicesStatisticsService: DevicesStatisticsService,
         @Inject(DestroyService) private readonly ngUnsubscribe$: Observable<void>,
