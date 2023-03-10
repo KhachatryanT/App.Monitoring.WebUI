@@ -7,10 +7,10 @@ import {HeaderComponent} from "./header/header.component";
 import { MainComponent } from './main/main.component';
 import {DevicesStatisticsService} from "./devicesStatistics.service";
 import {HttpClientModule} from "@angular/common/http";
-import { StatisticsComponent } from '././statistics/statistics.component';
 import {MatTableModule} from "@angular/material/table";
 import {CommonModule} from "@angular/common";
-import {EnumDescriptionPipe} from "../shared/types/enumDescription.pipe";
+import {DeviceTypeEnumDescriptionPipe} from "../shared/pipes/deviceTypeEnumDescription.pipe";
+import {StatisticsComponent} from "./statistics/statistics.component";
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import {EnumDescriptionPipe} from "../shared/types/enumDescription.pipe";
     HeaderComponent,
     MainComponent,
     StatisticsComponent,
-    EnumDescriptionPipe,
+    DeviceTypeEnumDescriptionPipe,
   ],
   imports: [
     BrowserModule,
