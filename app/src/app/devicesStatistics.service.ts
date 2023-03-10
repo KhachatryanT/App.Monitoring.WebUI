@@ -1,14 +1,14 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
-import {DeviceStatistic} from "../shared/types/deviceStatistic.type";
+import {DeviceStatistic} from '../shared/types/deviceStatistic.type';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DevicesStatisticsService {
   // todo move basePath to env
-  private readonly basePath = "https://localhost:7108";
+  private readonly basePath = 'https://localhost:7108';
 
   constructor(private readonly http: HttpClient) {
   }

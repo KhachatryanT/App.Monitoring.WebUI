@@ -1,5 +1,5 @@
 import {Injectable, OnDestroy} from '@angular/core';
-import {Subject} from "rxjs";
+import {Subject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

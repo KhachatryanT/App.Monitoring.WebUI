@@ -1,4 +1,4 @@
-import {DeviceType} from "./deviceType";
+import {DeviceType} from './deviceType';
 
 export interface DeviceStatistic {
   id: string;
