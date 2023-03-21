@@ -25,10 +25,9 @@ export class NodeEventsComponent implements OnInit {
         this.nodeEventsService
             .getNodeEvents(this.nodeId)
             .pipe(takeUntil(this.ngUnsubscribe$))
-            .subscribe(nodeEvents => (this.dataSource = new MatTableDataSource(nodeEvents.events)));
-    }
-
-    ngAfterViewInit() {
-        this.dataSource.sort = this.empTbSort;
+            .subscribe(nodeEvents => {
+                this.dataSource = new MatTableDataSource(nodeEvents.events);
+                this.dataSource.sort = this.empTbSort;
+            });
     }
 }

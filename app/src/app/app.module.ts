@@ -14,6 +14,7 @@ import { NodesComponent } from './nodes/nodes.component';
 import { NodeComponent } from './node/node.component';
 import { NodeEventsComponent } from './node-events/node-events.component';
 import { MatSortModule } from '@angular/material/sort';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -26,7 +27,15 @@ import { MatSortModule } from '@angular/material/sort';
         NodeComponent,
         NodeEventsComponent,
     ],
-    imports: [BrowserModule, AppRoutingModule, HttpClientModule, MatTableModule, CommonModule, MatSortModule],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        MatTableModule,
+        CommonModule,
+        MatSortModule,
+        BrowserAnimationsModule,
+    ],
     providers: [NodesService],
     bootstrap: [AppComponent],
 })

@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { GetNodeEventsResponse } from '../shared/types/getNodeEventsResponse.type';
+import { environment } from '../environments/environment';
 
 @Injectable({
     providedIn: 'root',
 })
 export class NodeEventsService {
-    // move basePath to env
-    private readonly basePath = 'https://localhost:7108';
+    private readonly basePath = environment.nodesApiUrl;
 
     constructor(private readonly http: HttpClient) {}
 
