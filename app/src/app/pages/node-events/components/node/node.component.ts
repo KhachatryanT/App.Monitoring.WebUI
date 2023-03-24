@@ -1,7 +1,7 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
-import { Node } from '../../shared/types/node.type';
-import { NodesService } from '../nodes.service';
-import { DestroyService } from '../destroy.service';
+import { Node } from '../../../../shared/types/node.type';
+import { NodesService } from '../../../../shared/services/nodes.service';
+import { DestroyService } from '../../../../shared/services/destroy.service';
 import { Observable, takeUntil } from 'rxjs';
 
 @Component({

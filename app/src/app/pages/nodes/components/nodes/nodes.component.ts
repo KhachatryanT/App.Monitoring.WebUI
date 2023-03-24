@@ -1,8 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { NodesService } from '../nodes.service';
-import { Node } from '../../shared/types/node.type';
+import { NodesService } from '../../../../shared/services/nodes.service';
+import { Node } from '../../../../shared/types/node.type';
 import { Observable, takeUntil } from 'rxjs';
-import { DestroyService } from '../destroy.service';
+import { DestroyService } from '../../../../shared/services/destroy.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -28,7 +28,7 @@ export class NodesComponent implements OnInit {
             .subscribe(nodes => (this.dataSource = new MatTableDataSource(nodes)));
     }
 
-    navigateToEventsPage(node: Node) {
+    navigateToEventsPage(node: Node): void {
         this.router.navigate([node.id], { relativeTo: this.route });
     }
 }

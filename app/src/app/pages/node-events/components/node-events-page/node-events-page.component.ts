@@ -1,13 +1,13 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, takeUntil } from 'rxjs';
-import { DestroyService } from '../destroy.service';
+import { DestroyService } from '../../../../shared/services/destroy.service';
 
 @Component({
     selector: 'app-node-events-page',
     templateUrl: './node-events-page.component.html',
 })
-export class NodeEventsPageComponent {
+export class NodeEventsPageComponent implements OnInit {
     public id: string;
 
     constructor(
