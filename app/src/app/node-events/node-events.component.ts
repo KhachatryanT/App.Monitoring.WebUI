@@ -1,8 +1,8 @@
 import { Component, Inject, Input, OnInit, ViewChild } from '@angular/core';
-import { NodeEvent } from '../../shared/types/nodeEvent.type';
+import { NodeEvent } from '../../shared/types/node-event.type';
 import { DestroyService } from '../destroy.service';
 import { Observable, takeUntil } from 'rxjs';
-import { NodeEventsService } from '../nodeEvents.service';
+import { NodeEventsService } from '../node-events.service';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 

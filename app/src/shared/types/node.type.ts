@@ -1,4 +1,4 @@
-import { DeviceType } from './deviceType';
+import { DeviceType } from './device-type';
 
 export interface Node {
     id: string;

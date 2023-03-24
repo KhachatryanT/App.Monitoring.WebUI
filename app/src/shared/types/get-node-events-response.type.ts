@@ -1,4 +1,4 @@
-import { NodeEvent } from './nodeEvent.type';
+import { NodeEvent } from './node-event.type';
 
 export interface GetNodeEventsResponse {
     id: string;

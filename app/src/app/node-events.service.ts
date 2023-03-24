@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { GetNodeEventsResponse } from '../shared/types/getNodeEventsResponse.type';
+import { GetNodeEventsResponse } from '../shared/types/get-node-events-response.type';
 import { environment } from '../environments/environment';
 
 @Injectable({
