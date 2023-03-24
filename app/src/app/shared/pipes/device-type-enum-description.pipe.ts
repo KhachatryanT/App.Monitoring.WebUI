@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { DeviceType } from '../types/deviceType';
+import { DeviceType } from '../types/device-type';
 
 @Pipe({
     name: 'deviceTypeEnumDescription',

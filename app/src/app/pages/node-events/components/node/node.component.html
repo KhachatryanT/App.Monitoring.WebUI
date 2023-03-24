@@ -1,0 +1,5 @@
+<div *ngIf="this.node">
+    <h2>{{ this.node.name }} {{ this.node.os | deviceTypeEnumDescription }}</h2>
+    <p>Идентификатор: {{ this.node.id }}</p>
+    <p>Версия: {{ this.node.version }}</p>
+</div>
