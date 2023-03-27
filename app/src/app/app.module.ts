@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { DeviceTypeEnumDescriptionPipe } from './shared/pipes/device-type-enum-description.pipe';
-import { NodesService } from './shared/services/nodes.service';
 import { MatTableModule } from '@angular/material/table';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
@@ -36,7 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MatSortModule,
         BrowserAnimationsModule,
     ],
-    providers: [NodesService],
+    providers: [],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

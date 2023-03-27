@@ -9,6 +9,7 @@ import { MatTableDataSource } from '@angular/material/table';
 @Component({
     selector: 'app-node-events',
     templateUrl: './node-events.component.html',
+    providers: [DestroyService],
 })
 export class NodeEventsComponent implements OnInit {
     @Input() public nodeId: string;
