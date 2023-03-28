@@ -14,6 +14,8 @@ import { NodeComponent } from './pages/node-events/components/node/node.componen
 import { NodeEventsComponent } from './pages/node-events/components/node-events/node-events.component';
 import { MatSortModule } from '@angular/material/sort';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -34,6 +36,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         CommonModule,
         MatSortModule,
         BrowserAnimationsModule,
+        FormsModule,
+        MatCheckboxModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
