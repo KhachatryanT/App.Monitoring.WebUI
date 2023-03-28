@@ -1,6 +1,6 @@
 export const environment = {
     production: true,
-    nodesApiUrl: '',
-    webSocketUrl: '',
-    longPollingIntervalInSec: 30,
+    nodesApiUrl: 'http://monitoring-api',
+    webSocketUrl: 'http://monitoring-api',
+    longPollingIntervalInSec: 2,
 };
