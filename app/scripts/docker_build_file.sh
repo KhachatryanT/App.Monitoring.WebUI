@@ -1,1 +1,3 @@
-docker buildx build -f ../Dockerfile --platform linux/amd64,linux/arm64/v8 --output type=tar,dest=../publish/monitoring-webui.tar ../
+docker buildx build --platform linux/amd64 -f ../Dockerfile -t monitoring-webui:latest --load ../
+docker save -o ../publish/monitoring-webui.tar monitoring-webui:latest
+docker image rm monitoring-webui:latest
