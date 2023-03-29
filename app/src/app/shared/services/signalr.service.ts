@@ -4,9 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { HubConnectionState } from '@microsoft/signalr';
 
-@Injectable({
-    providedIn: 'root',
-})
+@Injectable()
 export class SignalrService implements OnDestroy {
     private readonly basePath = environment.nodesApiUrl;
 
@@ -47,6 +45,5 @@ export class SignalrService implements OnDestroy {
             .then(() => console.log('WS connection stopped'))
             .catch(err => console.log('Error while stopping ws connection: ' + err));
         this.nodesModified$.complete();
-        console.log('Connection was destroyed');
     }
 }
