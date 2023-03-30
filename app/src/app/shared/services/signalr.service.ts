@@ -35,8 +35,8 @@ export class SignalrService implements OnDestroy {
             .catch((err: any) => console.log('Error while starting ws connection: ' + err));
     }
 
-    public addNodeModifiedListener(): void {
-        this.hubConnection.on('NodesModified', () => {
+    public addUnitOfWorkIsCompletedListener(): void {
+        this.hubConnection.on('UnitOfWorkIsCompleted', () => {
             this.nodesModified$.next();
         });
     }

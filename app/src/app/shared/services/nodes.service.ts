@@ -15,7 +15,7 @@ export class NodesService {
     constructor(private readonly http: HttpClient, private readonly signalrService: SignalrService) {}
 
     public getNodesWithListener(): Observable<Node[]> {
-        this.signalrService.addNodeModifiedListener();
+        this.signalrService.addUnitOfWorkIsCompletedListener();
 
         return this.signalrService.nodesModified$.pipe(
             switchMap(() => this.http.get<Node[]>(`${this.basePath}/nodes`)),
