@@ -12,10 +12,6 @@ export class NodesService {
 
     constructor(private readonly http: HttpClient) {}
 
-    public getNodes(): Observable<Node[]> {
-        return this.http.get<Node[]>(`${this.basePath}/nodes`);
-    }
-
     public getNode(id: string): Observable<Node> {
         return this.http.get<Node>(`${this.basePath}/nodes/${id}`);
     }
