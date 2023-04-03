@@ -6,6 +6,7 @@ import { DestroyService } from '../../../../shared/services/destroy.service';
 @Component({
     selector: 'app-node-events-page',
     templateUrl: './node-events-page.component.html',
+    providers: [DestroyService],
 })
 export class NodeEventsPageComponent implements OnInit {
     public id: string;

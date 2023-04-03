@@ -7,6 +7,7 @@ import { Observable, takeUntil } from 'rxjs';
 @Component({
     selector: 'app-node',
     templateUrl: './node.component.html',
+    providers: [DestroyService],
 })
 export class NodeComponent implements OnInit {
     @Input() public id: string;

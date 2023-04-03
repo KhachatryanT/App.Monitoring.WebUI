@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { DeviceTypeEnumDescriptionPipe } from './shared/pipes/device-type-enum-description.pipe';
-import { NodesService } from './shared/services/nodes.service';
 import { MatTableModule } from '@angular/material/table';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
@@ -15,6 +14,8 @@ import { NodeComponent } from './pages/node-events/components/node/node.componen
 import { NodeEventsComponent } from './pages/node-events/components/node-events/node-events.component';
 import { MatSortModule } from '@angular/material/sort';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -35,8 +36,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         CommonModule,
         MatSortModule,
         BrowserAnimationsModule,
+        FormsModule,
+        MatCheckboxModule,
     ],
-    providers: [NodesService],
+    providers: [],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
